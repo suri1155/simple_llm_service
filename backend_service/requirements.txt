@@ -1,0 +1,16 @@
+bcrypt
+fastapi
+httpx
+
+
+langchain
+langchain-openai
+
+psycopg2-binary
+pydantic[email]
+pydantic-settings
+pyjwt
+python-dotenv
+redis
+sqlalchemy
+uvicorn[standard]
