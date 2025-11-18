@@ -1,6 +1,6 @@
 # LLM Query Service
 
-An LLM-powered query service built with FastAPI, LangChain, and PostgreSQL, featuring user authentication and daily query rate limiting.
+An LLM-powered query service built with FastAPI, LangChain, and PostgreSQL, featuring user authentication and daily query rate limiting...
 
 ## Features
 
