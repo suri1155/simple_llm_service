@@ -1,29 +1,23 @@
-"""Database connection and session management."""
-
+# src/db/database.py
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
-
+from sqlalchemy.ext.declarative import declarative_base
+from typing import Generator
 from config.settings import get_settings
 
+Base = declarative_base()
 settings = get_settings()
 
-# Create database engine
 engine = create_engine(
     settings.database_url,
     echo=settings.debug,
     pool_pre_ping=True,
 )
 
-# Create session factory
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
-def get_db() -> Session:
-    """Get database session.
-
-    Yields:
-        Session: Database session.
-    """
+def get_db() -> Generator[Session, None, None]:
     db = SessionLocal()
     try:
         yield db

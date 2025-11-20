@@ -57,7 +57,7 @@ backend_llm_service/
 
 ## Prerequisites
 
-- Python 3.11+
+- Python 3.12+
 - PostgreSQL 12+
 - Redis 6+
 - OpenAI API Key
@@ -68,7 +68,7 @@ backend_llm_service/
 
 ```bash
 git clone <repository-url>
-cd backend_llm_service
+cd backend_service
 ```
 
 

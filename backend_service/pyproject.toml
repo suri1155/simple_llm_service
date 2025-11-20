@@ -1,23 +1,23 @@
 [project]
-name = "backend-llm-service"
+name = "backend-service"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
-    "bcrypt==4.1.1",
-    "fastapi==0.104.1",
-    "httpx==0.25.2",
-    "langchain==0.1.0",
-    "langchain-openai==0.0.5",
-    "psycopg2-binary==2.9.9",
-    "pydantic[email]==2.5.0",
-    "pydantic-settings>=2.2.1",
+    "bcrypt>=5.0.0",
+    "fastapi>=0.121.3",
+    "httpx>=0.28.1",
+    "langchain>=1.0.8",
+    "langchain-openai>=1.0.3",
+    "psycopg2-binary>=2.9.11",
+    "pydantic-settings>=2.12.0",
+    "pydantic[email]>=2.12.4",
     "pyjwt>=2.10.1",
-    "python-dotenv==1.0.0",
-    "redis==5.0.1",
-    "sqlalchemy==2.0.23",
-    "uvicorn[standard]==0.24.0",
+    "python-dotenv>=1.2.1",
+    "redis>=7.1.0",
+    "sqlalchemy>=2.0.44",
+    "uvicorn[standard]>=0.38.0",
 ]
 
 [dependency-groups]

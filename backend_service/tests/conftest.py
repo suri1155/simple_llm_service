@@ -1,10 +1,16 @@
 """Test configuration and fixtures."""
 
+import sys
+from pathlib import Path
+
 import pytest
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlbalchemy.orm import sessionmaker
 
-from src.db.database import Base
+# Add backend_service root to path so imports work
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from backend_service.src.db.database import Base
 from config.settings import get_settings
 
 
