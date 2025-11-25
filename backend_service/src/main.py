@@ -19,7 +19,7 @@ Base.metadata.create_all(bind=engine)
 # Initialize FastAPI app
 app = FastAPI(
     title="LLM Query Service",
-    description="LLM-powered query service with user authentication and rate limiting",
+    description="LLM-powered query service.",
     version="0.1.0",
 )
 
@@ -44,7 +44,6 @@ async def health_check():
 
 
 if __name__ == "__main__":
-
     uvicorn.run(
         "main:app",
         host="0.0.0.0",

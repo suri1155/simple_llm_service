@@ -1,4 +1,4 @@
-# LLM Query App - Frontend
+# LLM Query App - Frontend Service
 
 React-based frontend application for querying LLM with authentication.
 

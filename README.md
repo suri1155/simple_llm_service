@@ -1,4 +1,4 @@
-# simple_llm_service
+# Simple LLM Service
 
 This repository contains a small end-to-end example LLM application. The project demonstrates a minimal production-like setup with a FastAPI backend serving a LangChain-based LLM service, a React frontend, PostgreSQL for persistent storage, and Redis for caching/rate-limiting.
 
@@ -19,8 +19,6 @@ This repository contains a small end-to-end example LLM application. The project
 - `backend_service/` — backend implementation, configs, and its own `README.md`.
 - `frontend_service/` — React frontend and its `README.md`.
 - `docker-compose.yml` — orchestrates backend, frontend, Postgres, Redis, and other services.
-- `docker_running.md` — notes and commands for spinning up the full stack with Docker Compose.
-
 
 
 **OpenAI Model Configuration**
@@ -33,14 +31,25 @@ This application uses OpenAI models via LangChain. To use the service, you need:
 
 **Notes & Links**
 - set .env file for backend_service, refer [backend_service/README.md](backend_service/README.md)
-- To spin up the entire stack quickly, read `docker_running.md` at the repository root.
+
 
 **Start End to End Application**
+To spin up the entire stack quickly
 ```bash
 docker-compose up --build
 ```
 
-See `docker_running.md` for more details on running and troubleshooting the containers.
+**Accessing the Application**
+
+After starting the project, you can access the following:
+
+#### Frontend (UI)
+- http://localhost:3000/
+
+This is the main user interface of the application.
+
+#### Backend API (Swagger Page)
+- http://localhost:8000/docs
 
 
 ## License

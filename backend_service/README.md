@@ -1,4 +1,4 @@
-# LLM Query Service
+# LLM Query App - Backend Service
 
 An LLM-powered query service built with FastAPI, LangChain, and PostgreSQL, featuring user authentication and daily query rate limiting...
 
