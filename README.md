@@ -32,7 +32,7 @@ This application uses OpenAI models via LangChain. To use the service, you need:
 
 
 **Notes & Links**
-- set .env file for backend_service, refer [backend_service\README.md](backend_service\README.md)
+- set .env file for backend_service, refer [backend_service/README.md](backend_service/README.md)
 - To spin up the entire stack quickly, read `docker_running.md` at the repository root.
 
 **Start End to End Application**
