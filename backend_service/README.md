@@ -71,8 +71,6 @@ cp .env.example .env
 # Edit .env with your configuration
 ```
 
-
-
 ### Code formatting and linting
 
 ```bash

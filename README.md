@@ -30,18 +30,17 @@ This application uses OpenAI models via LangChain. To use the service, you need:
     - Get your OPENAI_API_KEY from [https://platform.openai.com](https://platform.openai.com)
     - supported models: `gpt-4`, `gpt-4-turbo`, `gpt-3.5-turbo`, etc.
 
+
+**Notes & Links**
+- set .env file for backend_service, refer [backend_service\README.md](backend_service\README.md)
+- To spin up the entire stack quickly, read `docker_running.md` at the repository root.
+
 **Start End to End Application**
 ```bash
 docker-compose up --build
 ```
 
 See `docker_running.md` for more details on running and troubleshooting the containers.
-
-
-**Notes & Links**
-- For backend configuration and settings, check `backend_service/config/settings.py`.
-- To spin up the entire stack quickly, read `docker_running.md` at the repository root.
-
 
 
 ## License
