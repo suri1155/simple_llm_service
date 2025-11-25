@@ -8,6 +8,7 @@ from src.api import auth_router, query_router
 from src.db import engine
 from src.models import Base
 from src.utils.logger import get_logger
+import uvicorn
 
 logger = get_logger(__name__)
 settings = get_settings()
@@ -42,20 +43,7 @@ async def health_check():
     return {"status": "ok", "version": "0.1.0"}
 
 
-@app.on_event("startup")
-async def startup_event():
-    """Startup event."""
-    logger.info("Application startup")
-
-
-@app.on_event("shutdown")
-async def shutdown_event():
-    """Shutdown event."""
-    logger.info("Application shutdown")
-
-
 if __name__ == "__main__":
-    import uvicorn
 
     uvicorn.run(
         "main:app",

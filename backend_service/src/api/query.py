@@ -37,14 +37,14 @@ async def create_query(
         HTTPException: If rate limited or processing fails.
     """
     # Check rate limit
-    # if rate_limiter.is_rate_limited(current_user.id):
-    #     remaining = rate_limiter.get_remaining_queries(current_user.id)
-    #     reset_time = rate_limiter.get_reset_time(current_user.id)
-    #     logger.warning(f"Rate limit exceeded for user {current_user.id}")
-    #     raise HTTPException(
-    #         status_code=status.HTTP_429_TOO_MANY_REQUESTS,
-    #         detail=f"Query limit exceeded. Remaining: {remaining}. Resets at {reset_time}",
-    #     )
+    if rate_limiter.is_rate_limited(current_user.id):
+        remaining = rate_limiter.get_remaining_queries(current_user.id)
+        reset_time = rate_limiter.get_reset_time(current_user.id)
+        logger.warning(f"Rate limit exceeded for user {current_user.id}")
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail=f"Query limit exceeded. Remaining: {remaining}. Resets at {reset_time}",
+        )
 
     try:
         # Process query

@@ -7,7 +7,7 @@ docker-compose up --build
 ### Run backend only (Postgres + Redis will auto-start if needed)
 
 ```bash
-docker-compose up backend
+docker-compose up -d backend
 ```
 
 ### Run frontend only
@@ -22,6 +22,8 @@ docker-compose up frontend
 docker-compose down
 ```
 
+# Other helpful Docker commands
+```bash
 # View Logs
 docker-compose logs -f
 
@@ -42,3 +44,4 @@ docker-compose ps
 
 # View Networks
 docker network ls
+```
